@@ -41,6 +41,7 @@ Register : https://t.me/OfficialBananaBot/banana?startapp=referral=FI85BH1
 
 
 For quest with bind, it will automatically skip, please do by yourself
+
 Kerjain sendiri tod, tar ga ke bind nyalahin sc
 
 Entahlah gw males nulis
