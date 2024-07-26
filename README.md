@@ -18,7 +18,7 @@ Register : https://t.me/OfficialBananaBot/banana?startapp=referral=FI85BH1
      ```
    - Ini akan menginstal dua modul yang diperlukan: `requests` untuk melakukan permintaan HTTP dan `colorama` untuk memberi warna teks di konsol.
 
-3. **Buka Bot Kuroro Ranch di PC (Telegram Web / Desktop)**
+3. **Buka Bot Banana di PC (Telegram Web / Desktop)**
    - Buka Telegram Web atau Telegram Desktop di PC kamu.
 
 4. **Ambil query_id**
