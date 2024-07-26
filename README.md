@@ -35,7 +35,9 @@ Register : https://t.me/OfficialBananaBot/banana?startapp=referral=FI85BH1
 - Auto Tap
 - Auto Clear Quest
 - Auto Claim
+- Auto Gacha Harvest
 - Multi Account
+- Loop based on the account with the fastest claim time 
 
   
 Entahlah gw males nulis
