@@ -36,10 +36,10 @@ def print_welcome_message():
                                    
 
     """)
-    print(Fore.GREEN + Style.BRIGHT + "KURORO RANCH BOT")
+    print(Fore.GREEN + Style.BRIGHT + "BANANA BOT")
     print(Fore.CYAN + Style.BRIGHT + "Jajanin dong orang baik :)")
     print(Fore.YELLOW + Style.BRIGHT + "0x5bc0d1f74f371bee6dc18d52ff912b79703dbb54")
-    print(Fore.RED + Style.BRIGHT + "Update Link: https://github.com/dcbott01/kuroro")
+    print(Fore.RED + Style.BRIGHT + "Update Link: https://github.com/dcbott01/banana")
     print(Fore.BLUE + Style.BRIGHT + "Tukang Rename MATI AJA")
 
 def login(tg_info):
