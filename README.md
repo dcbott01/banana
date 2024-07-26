@@ -39,5 +39,8 @@ Register : https://t.me/OfficialBananaBot/banana?startapp=referral=FI85BH1
 - Multi Account
 - Loop based on the account with the fastest claim time 
 
-  
+
+For quest with bind, it will automatically skip, please do by yourself
+Kerjain sendiri tod, tar ga ke bind nyalahin sc
+
 Entahlah gw males nulis
