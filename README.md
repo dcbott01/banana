@@ -36,6 +36,7 @@ Register : https://t.me/OfficialBananaBot/banana?startapp=referral=FI85BH1
 - Auto Clear Quest
 - Auto Claim
 - Auto Gacha Harvest
+- Auto Sell Banana If you have more than 1
 - Multi Account
 - Loop based on the account with the fastest claim time 
 
