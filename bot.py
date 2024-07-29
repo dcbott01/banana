@@ -93,6 +93,20 @@ def do_lottery():
     response = requests.post(do_lottery_url, headers=headers, json={})
     return response
 
+def get_banana_list():
+    banana_list_url = f'{base_url}/get_banana_list'
+    response = requests.get(banana_list_url, headers=headers)
+    return response
+
+def do_sell(banana_id, sell_count):
+    sell_url = f'{base_url}/do_sell'
+    sell_payload = {
+        "bananaId": banana_id,
+        "sellCount": sell_count
+    }
+    response = requests.post(sell_url, headers=headers, json=sell_payload)
+    return response
+
 def calculate_remaining_time(lottery_data):
     last_countdown_start_time = lottery_data.get('last_countdown_start_time', 0)
     countdown_interval = lottery_data.get('countdown_interval', 0)  # in minutes
@@ -187,6 +201,33 @@ def process_account(tg_info, perform_lottery, perform_quests):
             if remaining_time_minutes <= 0:
                 print(f"{Fore.YELLOW}Claiming Lottery Reward...")
                 claim_lottery_response = claim_lottery()
+
+        banana_list_response = get_banana_list()
+        if banana_list_response.status_code == 200:
+            banana_list_data = banana_list_response.json().get('data', {}).get('banana_list', [])
+            print(f"{Fore.YELLOW}====== Try To Sell Banana ======")
+            for banana in banana_list_data:
+                banana_id = banana.get('banana_id', 'N/A')
+                banana_name = banana.get('name', 'N/A')
+                banana_url = banana.get('url', 'N/A')
+                banana_rarity = banana.get('rarity', 'N/A')
+                banana_ripeness = banana.get('ripeness', 'N/A')
+                daily_peel_limit = banana.get('daily_peel_limit', 'N/A')
+                sell_exchange_peel = banana.get('sell_exchange_peel', 'N/A')
+                sell_exchange_usdt = banana.get('sell_exchange_usdt', 'N/A')
+                count = banana.get('count', 0)
+
+                # Sell bananas if count is 2 or more
+                if count >= 2:
+                    print(f"{Fore.YELLOW}Menjual {banana_name} (Banana ID: {banana_id}) sebanyak 1...")
+                    sell_response = do_sell(banana_id, 1)
+                    if sell_response.status_code == 200:
+                        print(f"{Fore.GREEN}Berhasil menjual 1 {banana_name}.")
+                    else:
+                        print(f"{Fore.RED}Gagal menjual {banana_name}: {sell_response.status_code}")
+
+        else:
+            print(f"{Fore.RED}Error fetching banana list: {banana_list_response.status_code}")
 
         # Perform quests if user chose to
         if perform_quests:
